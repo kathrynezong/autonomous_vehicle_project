@@ -2,8 +2,6 @@
 
 A ROS 2 perception and control system that enables an F1TENTH vehicle to navigate a closed track, recognize traffic signs, detect an open parking space, and perform a front-in parking maneuver.
 
-Developed as a six-person team project for UBC's CPEN 391 course, the system combines LiDAR, camera, and odometry data in a real-time robotics pipeline.
-
 ## Project Overview
 
 The vehicle completes two laps of a classroom-scale track. During the first lap, it follows the left wall and records a parking-space candidate detected on its right. On the second lap, it confirms the space, aligns with it, and executes a front-in parking maneuver.
@@ -70,12 +68,6 @@ test/               # Package quality checks
 - 2D LiDAR and wheel odometry
 - Ackermann steering control
 
-## My Contributions
-
-- Explored LiDAR-camera fusion for parking-space detection
-- Implemented geometric validation for parking-space feasibility
-- Supported integration and end-to-end testing of the perception pipeline
-
 ## Build and Run
 
 The package is designed for a ROS 2 F1TENTH workspace with the vehicle's LiDAR, camera, odometry, and VESC drivers already configured.
@@ -90,14 +82,3 @@ ros2 launch parking_perception project_launch.py
 
 The launch file starts both the parking controller and sign-detection node. Control and perception parameters can be tuned in `launch/project_launch.py`.
 
-## Project Scope
-
-The repository contains the combined ROS 2 package for the parking and sign-detection pipelines. During the final course demonstration, the parking and sign-detection capabilities were validated separately rather than as one fully integrated run.
-
-## Team
-
-Jimmy Chen, Kayli Cheung, Sissi Qi, Soroush Rohanizadeh, Tera Wan, and Kathryne Zong
-
-## License
-
-MIT
